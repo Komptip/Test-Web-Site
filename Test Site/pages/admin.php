@@ -33,8 +33,8 @@
 			<!-- Цикл создания заданий -->
 			
 			<?php foreach(range(1, mysqli_num_rows($db_result)) as $currect_task): ?>
+				<?php $mysql_array = mysqli_fetch_assoc($db_result); ?>
 				<?php if($mysql_array['text'] != ''):?>
-					<?php $mysql_array = mysqli_fetch_assoc($db_result); ?>
 					<div class="task">
 						<p class="email">Username: <?php echo $mysql_array['username']; ?></p>
 						<hr>
